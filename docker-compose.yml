@@ -2,7 +2,7 @@ version: "3"
 
 services:
   web:
-    command: "python src/manage.py runserver 0.0.0.0:8000"
+    command: "python manage.py runserver 0.0.0.0:8000"
     environment:
       PYTHONUNBUFFERED: 1
       HASHID_SALT: "123456"
@@ -13,6 +13,8 @@ services:
       - db
     ports:
       - "8000:8000"
+    volumes:
+      - "./src:/app"
   db:
     image: postgres:latest
     ports:
