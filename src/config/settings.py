@@ -39,6 +39,9 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'django_extensions',
     'rest_framework',
+
+    # Local apps
+    'v1.accounts.apps.AccountsConfig',
 ]
 
 MIDDLEWARE = [
